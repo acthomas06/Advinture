@@ -7,10 +7,16 @@ form ul {
   list-style-type: none;
 }
 
-accordion-group {
-  cursor: pointer;
+form.contained {
+  padding-right: 30px;
 }
+
+#wrapper {
+  
+}
+
 .container {
+  min-width: 800px;
   padding-top: 150px;
 }
 .title {
@@ -38,20 +44,30 @@ accordion-group {
   margin-left: -75px;
 }
 
-form.left {
+.left {
+  cursor: pointer;
+  display: inline-block;
+  width: 50%;
+  float: left;
   padding-right: 30px;
 }
 
-form.right {
-  padding-right: 30px;
+.right {
+  cursor: pointer;
+  display: inline-block;
+  width: 50%;
+  float: right;
 }
 
 .list {
-  margin: 0em auto;
   border-radius: 5px;
   border: 2px solid black;
   text-decoration: none;
   list-style-type: none;
+}
+.newsfeed {
+  position: relative;
+  top: 50px;
 }
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,

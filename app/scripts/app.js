@@ -19,19 +19,5 @@ angular.module('advintureApp', ['ui.router', 'ui.bootstrap'])
 					}
 				}
 			})
-			.state('post', {
-				url: '/posts',
-				views: {
-					body: {
-						templateUrl: 'views/posts.html',
-						controller: 'PostCtrl',
-						resolve: {
-							event: function(Eventservice, $stateParams) {
-								return Eventservice.getEvent($stateParams.id);
-							}
-						}
-					}
-				}
-			})
 		});
 

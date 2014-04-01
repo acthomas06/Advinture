@@ -5,6 +5,7 @@ angular.module('advintureApp')
     $scope.events = events;
     $scope.eventFilter = {};
     $scope.feedlimit = 5;
+    $scope.newEvent = {};
     $scope.addEvent = function() {
     	Eventservice.addEvent($scope.newEvent).then(function() {
     		$scope.events.push(angular.copy($scope.newEvent));

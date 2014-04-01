@@ -1,0 +1,30 @@
+<div style="cursor: pointer;" ng-controller="AccordionCtrl">
+	<accordion close-others="oneAtATime">
+		<accordion-group heading="Add Events" class="accordion-toggle">
+				<form class="contained" ng-submit="addEvent()">
+					<ul>
+						<li><input class="form-control" placeholder="Title" type="text" ng-model="newEvent.title"/></li>
+						<li><input class="form-control" placeholder="Description" type="text" ng-model="newEvent.desc"/></li>
+						<li><input class="form-control" placeholder="Location" type="text" ng-model="newEvent.loc" /></li>
+						<li><input class="form-control" placeholder="Date" type="text" ng-model="newEvent.date" /></li>
+						<li><input type="submit" value="Submit" /></li>
+					</ul>
+				</form>
+		</accordion-group>
+	</accordion>
+</div>
+
+<div style="cursor: pointer;">
+	<accordion>
+		<accordion-group heading="Search Events">
+			<form class="contained">
+				<ul>
+					<li><input class="form-control" placeholder="Search by Title" ng-model="eventFilter.title" /></li>
+					<li><input class="form-control" placeholder="Search by Description" ng-model="eventFilter.desc" /></li>
+					<li><input class="form-control" placeholder="Search by Location" ng-model="eventFilter.loc" /></li>
+					<li><input class="form-control" placeholder="Search by Date" ng-model="eventFilter.date" /></li>
+				</ul>
+			</form>
+		</accordion-group>
+	</accordion>
+</div>

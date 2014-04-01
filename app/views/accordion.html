@@ -1,0 +1,13 @@
+<accordion close-others="true">
+	<accordion-group heading="Add Events" class="accordion-toggle">
+			<form class="left" ng-submit="addEvent()">
+				<ul>
+					<li><input class="form-control" placeholder="Title" type="text" ng-model="newEvent.title"/></li>
+					<li><input class="form-control" placeholder="Description" type="text" ng-model="newEvent.desc"/></li>
+					<li><input class="form-control" placeholder="Location" type="text" ng-model="newEvent.loc" /></li>
+					<li><input class="form-control" placeholder="Date" type="text" ng-model="newEvent.date" /></li>
+					<li><input type="submit" value="Submit" /></li>
+				</ul>
+			</form>
+	</accordion-group>
+</accordion>

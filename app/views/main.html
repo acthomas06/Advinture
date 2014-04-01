@@ -1,0 +1,39 @@
+<div ng-controller="AccordionCtrl">
+	<accordion close-others="oneAtATime">
+		<accordion-group heading="Add Events" class="accordion-toggle">
+				<form class="left" ng-submit="addEvent()">
+					<ul>
+						<li><input class="form-control" placeholder="Title" type="text" ng-model="newEvent.title"/></li>
+						<li><input class="form-control" placeholder="Description" type="text" ng-model="newEvent.desc"/></li>
+						<li><input class="form-control" placeholder="Location" type="text" ng-model="newEvent.loc" /></li>
+						<li><input class="form-control" placeholder="Date" type="text" ng-model="newEvent.date" /></li>
+						<li><input type="submit" value="Submit" /></li>
+					</ul>
+				</form>
+		</accordion-group>
+	</accordion>
+
+
+<accordion>
+	<accordion-group heading="Search Events">
+		<form class="right">
+			<ul>
+				<li><input class="form-control" placeholder="Search by Title" ng-model="eventFilter.title" /></li>
+				<li><input class="form-control" placeholder="Search by Description" ng-model="eventFilter.desc" /></li>
+				<li><input class="form-control" placeholder="Search by Location" ng-model="eventFilter.loc" /></li>
+				<li><input class="form-control" placeholder="Search by Date" ng-model="eventFilter.date" /></li>
+			</ul>
+		</form>
+	</accordion-group>
+</accordion>
+
+<h2> Latest Events </h2>
+<div>
+	<ul class="list" ng-repeat="event in events | filter: eventFilter | limitTo: feedlimit">
+		<li><label>Title:</label> {{event.title}}</a></li>
+		<li><label>Description:</label> {{event.description}}</li>
+		<li><label>Location:</label> {{event.location}}</li>
+		<li><label>Date:</label> {{event.date}}</li>
+	</ul>
+</div>
+<input type="button" value="View More Posts" ng-click="viewMore()" />

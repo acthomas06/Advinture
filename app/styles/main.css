@@ -1,0 +1,128 @@
+/* Space out content a bit */
+body {
+  padding-bottom: 20px;
+}
+form ul {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+accordion-group {
+  cursor: pointer;
+}
+.container {
+  padding-top: 150px;
+}
+.title {
+  padding-top: 25px;
+  font-family: "FranklySpokenTwo";
+  color: white;
+  font-size: 36px;
+}
+.navbar-default.navbar {
+  padding: 0;
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  height: 20%;
+  width: 100%;
+  position: fixed;
+  background: black;
+}
+
+.navbar-header {
+  left: 50%;
+  display: inline-block;
+  position: fixed;
+  margin-left: -75px;
+}
+
+form.left {
+  padding-right: 30px;
+}
+
+form.right {
+  padding-right: 30px;
+}
+
+.list {
+  margin: 0em auto;
+  border-radius: 5px;
+  border: 2px solid black;
+  text-decoration: none;
+  list-style-type: none;
+}
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}

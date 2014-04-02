@@ -7,7 +7,7 @@ var listEvents = function (req, res) {
 		filter = {title: req.params.title};
 	}
 	EventPost.find(filter)
-	.select('title description location date time')
+	.select('title description location date')
 	.exec(function(err, posts) {
 		res.send(posts);
 	});

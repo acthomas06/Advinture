@@ -1,5 +1,6 @@
 /* Space out content a bit */
 body {
+  background: #00CD66;
   padding-bottom: 20px;
 }
 form ul {
@@ -7,12 +8,54 @@ form ul {
   list-style-type: none;
 }
 
+li label {
+  font-family: "FranklySpokenTwo";
+  font-size: 12px;
+}
 form.contained {
   padding-right: 30px;
 }
 
-#wrapper {
-  
+#addSubmit {
+  border: 1px solid black;
+  border-radius: 10px;
+  font-family:"FranklySpokenTwo";
+  background: none;
+}
+
+#newsbtn {
+  text-align: center;
+}
+
+#newsfeed {
+  overflow: auto;
+  top: 50px;
+}
+
+.selectmenu {
+  border: 1px solid black;
+  font-family: "FranklySpokenTwo";
+  font-size: 10px;
+  padding: 5px;
+  width: 25%;
+  height: 25%;
+}
+
+.accform {
+  color: white;
+  background: black;
+}
+
+.newsbtn {
+  border: 1px solid black;
+  border-radius: 10px;
+  background: white;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "FranklySpokenTwo";
+  font-size: 18px;
+  color: black;
 }
 
 .container {
@@ -20,19 +63,17 @@ form.contained {
   padding-top: 150px;
 }
 .title {
-  padding-top: 25px;
+  cursor: pointer;
+  padding-top: 35px;
   font-family: "FranklySpokenTwo";
   color: white;
-  font-size: 36px;
+  font-size: 44px;
 }
 .navbar-default.navbar {
-  padding: 0;
-  border-top: 4px solid black;
-  border-bottom: 4px solid black;
-  border-left: 2px solid black;
-  border-right: 2px solid black;
-  height: 20%;
+  padding: 0px;
+  height: 140px;
   width: 100%;
+  border: 1px solid black;
   position: fixed;
   background: black;
 }
@@ -60,14 +101,17 @@ form.contained {
 }
 
 .list {
+  background: white;
   border-radius: 5px;
   border: 2px solid black;
   text-decoration: none;
   list-style-type: none;
 }
-.newsfeed {
-  position: relative;
-  top: 50px;
+
+.selectmenus {
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,

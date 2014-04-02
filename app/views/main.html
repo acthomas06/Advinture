@@ -1,10 +1,24 @@
 <div ng-include="'views/forms.html'"></div>
-	<div class="newsfeed">
-			<ul class="list" ng-repeat="event in events | filter: eventFilter | limitTo: feedlimit">
-				<li><label>Title:</label> {{event.title}}</a></li>
-				<li><label>Description:</label> {{event.description}}</li>
-				<li><label>Location:</label> {{event.location}}</li>
-				<li><label>Date:</label> {{event.date}}</li>
-			</ul>
-		<input type="button" value="View More Posts" ng-click="viewMore()" />
-	</div>
+<div class="selectmenus">
+	<select class="selectmenu" ng-model="orderAttribute" class="input-medium">
+		<option value="title">Title</option>
+		<option value="description">Description</option>
+		<option value="location">Location</option>
+		<option value="date">Date</option>
+	</select>
+	<select class="selectmenu" ng-model="orderReverse" class="input-medium">
+		<option value="true">Descending</option>
+		<option value="false">Ascending</option>
+	</select>
+</div>
+<div id="newsfeed">
+		<ul class="list" ng-repeat="event in events | orderBy:orderAttribute:orderReverse | filter: {title: eventFilter.title, description: eventFilter.desc, location: eventFilter.loc, date: eventFilter.date} | limitTo: feedlimit">
+			<li><label>title:</label><span ng-show='event.title'> {{event.title}}</span></li>
+			<li><label>description:</label><span ng-show='event.description'> {{event.description}}</span></li>
+			<li><label>location:</label><span ng-show='event.location'> {{event.location}}</span></li>
+			<li><label>date:</label><span ng-show='event.date'> {{event.date}}</span></li>
+		</ul>
+</div>
+<div id="newsbtn">
+	<input type="button" class="newsbtn" value="view more" ng-click="viewMore()" />
+</div>

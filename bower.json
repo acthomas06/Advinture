@@ -9,7 +9,7 @@
     "bootstrap": "~3.0.3",
     "angular-ui-router": "*",
     "angular-bootstrap": "*",
-    "momentjs":"*"
+    "angular-momentjs":"*"
   },
   "devDependencies": {
     "angular-mocks": "1.2.6",

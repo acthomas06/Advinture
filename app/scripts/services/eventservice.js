@@ -15,24 +15,6 @@ angular.module('advintureApp')
             return deferred.promise;
     	},
 
-        getEvent: function(id) {
-            var deferred = $q.defer();
-
-            $http({
-                method: 'GET',
-                url:  'http://localhost:8080/posts/' + id}).success(function (data, status, headers, config) {
-                if(Array.isArray(data)) {
-                    deferred.resolve(data[0]);
-                }
-                else {
-                    deferred.resolve(data);
-                }
-            }).error(function (data, status, headers, config) {
-                deferred.reject(data);
-            });
-            return deferred.promise;
-        },
-
         addEvent: function(data) {
             var deferred = $q.defer();
             $http({
@@ -40,17 +22,16 @@ angular.module('advintureApp')
                 url: 'http://localhost:8080/posts',
                 data: {
                     title: data.title,
-                    description: data.desc,
-                    location: data.loc,
+                    description: data.description,
+                    location: data.location,
                     date: data.date
                     }
             }).success(function (data, status, headers, config) {
-                console.log(data);
                 deferred.resolve(data);
             }).error(function (data, status, headers, config) {
                 deferred.reject(data);
             });
-            console.log(event);
+            console.log(data);
             return deferred.promise;
         }
     };
